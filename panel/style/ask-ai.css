@@ -1,0 +1,53 @@
+ask-ai-chat-dialog[popover] {
+	width: 96%;
+	margin: 0.5em;
+}
+
+action-bar {
+	display: flex;
+	align-items: center;
+	padding: 4px;
+	border-radius: 0 0 8px 8px;
+	background-color: light-dark(whitesmoke, black);
+	position: relative;
+
+	& atom-icon {
+		margin-left: -1.5em;
+	}
+
+	& section[contenteditable="true"] {
+		field-sizing: content;
+		font-family: monospace;
+		font-size: 0.9rem;
+		width: 100%;
+		min-height: 1lh;
+		padding: 4px;
+		border-radius: 4px;
+		border: var(--border);
+	}
+
+	& button {
+		border-radius: 4px;
+	}
+}
+
+mark-writer-pad {
+	display: block;
+	min-height: 4lh;
+	max-height: 20lh;
+	padding: 5px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	border-radius: 8px 8px 0 0;
+	background-color: light-dark(white, hsl(0, 0%, 16%));
+
+	/* &:empty {
+		background-image: url(/assets/matrix.svg);
+		box-shadow: none;
+	} */
+
+	& ul,
+	& ol {
+		padding-left: 24px;
+	}
+}

@@ -1,0 +1,155 @@
+{
+	"tutorialTitle": "Create a New Gmail Account on Your PC or Laptop",
+	"targetWebsite": "google.com",
+	"targetLinkUrl": "https://google.com",
+	"steps": [
+		{
+			"stepNum": 1,
+			"actionType": "navigation",
+			"action": "Go to the Google homepage",
+			"targetElement": "Web browser address bar",
+			"instruction": "Open your internet browser (like Chrome, Edge, or Firefox) and navigate to the Google website.",
+			"explanation": null,
+			"visualHint": "The browser window displaying the Google search page.",
+			"pauseDuration": 1500,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 2,
+			"actionType": "click",
+			"action": "Start the sign-in process",
+			"targetElement": "Sign In button",
+			"instruction": "Click the 'Sign In' button.",
+			"explanation": null,
+			"visualHint": "The top right corner of the Google homepage.",
+			"pauseDuration": 1000,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 3,
+			"actionType": "click",
+			"action": "Begin account creation",
+			"targetElement": "Create account link",
+			"instruction": "On the sign-in screen, click the 'Create account' link.",
+			"explanation": null,
+			"visualHint": "Found near the bottom of the sign-in box.",
+			"pauseDuration": 1000,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 4,
+			"actionType": "select",
+			"action": "Choose account type",
+			"targetElement": "For my personal use option",
+			"instruction": "Select 'For my personal use' from the options provided. (Most users should choose this one).",
+			"explanation": null,
+			"visualHint": "The list of account types (Personal, Child, Work or business).",
+			"pauseDuration": 1500,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 5,
+			"actionType": "input",
+			"action": "Enter your name",
+			"targetElement": "First and Last Name fields",
+			"instruction": "Type your First name and Last name into the respective fields, and then click 'Next'.",
+			"explanation": null,
+			"visualHint": "The form asking for your name.",
+			"pauseDuration": 2000,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 6,
+			"actionType": "input",
+			"action": "Provide basic information",
+			"targetElement": "Date of birth and Gender fields",
+			"instruction": "Enter your Date of birth and select your Gender from the dropdown menu. Click 'Next'.",
+			"explanation": null,
+			"visualHint": "The form asking for your birthday and gender.",
+			"pauseDuration": 2000,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 7,
+			"actionType": "input",
+			"action": "Select a Gmail address",
+			"targetElement": "Gmail address creation field/suggested addresses",
+			"instruction": "You can either select one of the suggested addresses or click 'Create your own Gmail address' and type in the name you want. This will be your permanent email address.",
+			"explanation": null,
+			"visualHint": "The page displaying suggested addresses and the option to create a custom one.",
+			"pauseDuration": 3000,
+			"warnings": ["Your custom address must be unique; Google will tell you if it's already taken."],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 8,
+			"actionType": "click",
+			"action": "Continue to password setup",
+			"targetElement": "Next button",
+			"instruction": "Click 'Next' once you've chosen your desired email address.",
+			"explanation": null,
+			"visualHint": "The blue button on the bottom of the page.",
+			"pauseDuration": 1000,
+			"warnings": [],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 9,
+			"actionType": "input",
+			"action": "Set a secure password",
+			"targetElement": "Password field",
+			"instruction": "Enter a strong password for your account. Make sure it is something you can remember but that others can't guess. Click 'Next'.",
+			"explanation": null,
+			"visualHint": "The page where you type your new password.",
+			"pauseDuration": 2500,
+			"warnings": ["Use a mix of uppercase and lowercase letters, numbers, and symbols for a strong password."],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 10,
+			"actionType": "input",
+			"action": "Enter phone number for verification",
+			"targetElement": "Phone number field",
+			"instruction": "Type in your phone number to receive a verification code. This step is now required for new accounts. Click 'Next'.",
+			"explanation": null,
+			"visualHint": "The page requesting your phone number.",
+			"pauseDuration": 2000,
+			"warnings": [
+				"If you see an error saying your number can't be used, it may be linked to too many existing Google accounts (the limit is 10). You may need to delete unused accounts first."
+			],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 11,
+			"actionType": "input",
+			"action": "Verify your account",
+			"targetElement": "Verification code field",
+			"instruction": "Enter the six-digit verification code that was sent to your phone number via text message. Click 'Next'.",
+			"explanation": null,
+			"visualHint": "The field where you input the code.",
+			"pauseDuration": 2000,
+			"warnings": [
+				"Check your phone's text messages for the code. If you don't receive it, you may need to wait a minute or request a new code."
+			],
+			"alternativeMethods": []
+		},
+		{
+			"stepNum": 12,
+			"actionType": "navigation",
+			"action": "Access Gmail inbox",
+			"targetElement": "Gmail link/button",
+			"instruction": "Once your account is created, look for the 'Gmail' link or icon (often a letter envelope) and click it to go to your new inbox.",
+			"explanation": null,
+			"visualHint": "Found on the right side of the Google navigation bar or in the app launcher (9-dot icon).",
+			"pauseDuration": 1500,
+			"warnings": [],
+			"alternativeMethods": ["You can also navigate directly to mail.google.com"]
+		}
+	]
+}

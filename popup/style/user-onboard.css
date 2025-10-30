@@ -1,0 +1,111 @@
+ul {
+	padding-left: 0;
+	margin-block: 0;
+
+	& li {
+		list-style-type: none;
+	}
+}
+
+onboarding-form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.8em;
+	padding: 0.5em;
+	margin: 0.5em;
+	border-radius: 0.5em;
+	box-shadow: var(--card);
+	background-color: light-dark(white, hsl(0, 0%, 12%));
+}
+
+ul.professions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em 0.8em;
+
+	& label {
+		display: inline-block;
+		border-radius: 1em;
+		font-size: 0.9rem;
+		padding: 0.5em;
+		color: hsl(var(--hue), 100%, 30%);
+		border: 1px solid hsl(var(--hue), 100%, 40%);
+		white-space: nowrap;
+		cursor: pointer;
+
+		&:has(input:checked) {
+			background-color: hsl(var(--hue), 100%, 84%);
+		}
+	}
+}
+
+input[name="profession"] {
+	width: 50%;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	border: var(--border);
+}
+
+section.prefrences {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+	padding: 0.5em;
+
+	& ul {
+		display: flex;
+		column-gap: 1em;
+	}
+
+	li {
+		flex-grow: 1;
+		text-align: center;
+		border: var(--border);
+		border-radius: 0.5em;
+		padding-block: 0.5em;
+
+		& label {
+			width: 100%;
+			height: 100%;
+
+			cursor: pointer;
+		}
+
+		&:has(input:checked) {
+			background-color: rgba(53, 136, 219, 0.7);
+			border: 2px ridge dodgerblue;
+		}
+	}
+}
+
+button[type="submit"] {
+	display: block;
+	width: 60%;
+	padding-block: 0.8em;
+	margin-inline: auto;
+	margin-block: 0.5em;
+	color: #fff;
+	border-radius: 0.5em;
+	box-shadow: var(--card);
+	background-size: 200% auto;
+	background-image: linear-gradient(to right, #4776e6 0%, #8e54e9 51%, #4776e6 100%);
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+
+	&:hover {
+		background-position: right center; /* change the direction of the change here */
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+textarea {
+	field-sizing: content;
+	width: 100%;
+	min-height: 3lh;
+	border-radius: 0.5em;
+	border: var(--border);
+}

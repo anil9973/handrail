@@ -1,0 +1,58 @@
+{
+	"manifest_version": 3,
+	"minimum_chrome_version": "126",
+	"offline_enabled": true,
+	"name": "HandRail - Turn tutorials into live guidance",
+	"short_name": "HandRail",
+	"description": "Never get stuck following tutorials again. AI extracts steps from videos, docs and guides you or automates them directly on websites",
+	"version": "0.0.1",
+	"author": "Brahmastra Techeq",
+	"icons": {
+		"128": "icon-128.png",
+		"16": "icon.png"
+	},
+
+	"action": {
+		"default_title": "HandRail",
+		"default_popup": "popup/index.html"
+	},
+
+	"side_panel": {
+		"default_path": "panel/index.html"
+	},
+
+	"background": {
+		"service_worker": "background/background.js",
+		"type": "module"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://localhost:4400/*"],
+			"js": ["scripts/info-tooltip.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	],
+
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Alt+M",
+				"windows": "Alt+M",
+				"mac": "Alt+M",
+				"linux": "Alt+M"
+			}
+		}
+	},
+
+	"web_accessible_resources": [
+		{
+			"resources": ["scripts/*"],
+			"matches": ["<all_urls>"]
+		}
+	],
+
+	"permissions": ["activeTab", "scripting", "sidePanel", "storage"],
+	"host_permissions": ["<all_urls>"]
+}

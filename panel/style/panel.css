@@ -1,0 +1,33 @@
+top-header-bar {
+	display: block;
+	padding: 0.4em;
+	border-radius: 0.5em 0.5em 0 0;
+	box-shadow: var(--card);
+	background-color: light-dark(white, hsl(0, 0%, 20%));
+}
+
+handrail-panel {
+	display: block;
+	min-height: 50vh;
+}
+
+prompt-input {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 1em;
+	margin-top: 2em;
+
+	& section {
+		width: 80%;
+		min-height: 8lh;
+		border: var(--border);
+		border-radius: 0.5em;
+	}
+
+	& button {
+		width: 50%;
+		background-color: dodgerblue;
+	}
+}

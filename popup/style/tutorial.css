@@ -1,0 +1,100 @@
+@scope (tutorial-extract-container) {
+	:scope {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5em;
+		padding: 0.5em;
+		margin: 1em;
+		border-radius: 0.5em;
+		box-shadow: var(--card);
+		background-color: light-dark(white, hsl(0, 0%, 10%));
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	textarea {
+		field-sizing: content;
+		width: 100%;
+		min-height: 5lh;
+		border-radius: 0.5em;
+		border: var(--border);
+	}
+
+	button {
+		padding: 0.5em;
+		border-radius: 0.5em;
+		box-shadow: var(--card);
+		cursor: pointer;
+		background-image: linear-gradient(to right, #fc354c 0%, #0abfbc 51%, #fc354c 100%);
+		transition: 0.5s;
+		background-size: 200% auto;
+		&:hover {
+			background-position: right center; /* change the direction of the change here */
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	img {
+		max-height: 5lh;
+		object-fit: scale-down;
+	}
+}
+
+previous-tutorial-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+	padding-inline: 0.5em;
+}
+
+tutorial-card {
+	display: flex;
+	border-radius: 0.5em;
+	box-shadow: var(--card);
+	background-color: light-dark(whitesmoke, hsl(0, 0%, 15%));
+
+	& img {
+		width: 12ch;
+		object-fit: fill;
+		border-radius: 0.5em 0 0 0.5em;
+	}
+
+	& .column {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.4em;
+		padding: 0.4em;
+	}
+
+	& .tutorial-name {
+		font-weight: 500;
+		line-clamp: 1;
+	}
+
+	& .tutorial-description {
+		font-size: small;
+		color: gray;
+		line-clamp: 1;
+	}
+	& .tutorial-info {
+		font-size: 90%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	& .chip-item {
+		--hue: 0;
+		border-radius: 0.4em;
+		font-size: 0.9rem;
+		color: hsl(var(--hue), 100%, 30%);
+		border: 1px solid hsl(var(--hue), 100%, 40%);
+		padding: 0.2em 0.5em;
+		background-color: hsl(var(--hue), 100%, 84%);
+		margin-right: 4px;
+		vertical-align: super;
+		white-space: nowrap;
+	}
+}
