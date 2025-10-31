@@ -12,7 +12,6 @@ export class StepCard extends HTMLElement {
 		this.step = step;
 		this.aiChatSession = aiChatSession;
 		this.style.setProperty("anchor-name", "--step-anchor-" + this.step.stepNum);
-		console.log(step.state);
 		this.dataset.status = step.state.status;
 		this.step.state = react(step.state);
 	}

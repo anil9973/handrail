@@ -1,14 +1,13 @@
 import { TutorialStep, ACTION_TYPES, STEP_STATUS } from "../../db/Step.js";
+import { AskAiChatDialog } from "../ask-ai/ask-ai-chat-dialog.js";
 import { getCrtTab } from "../../js/extractor.js";
 import { html } from "../../js/om.compact.js";
-import { AskAiChatDialog } from "../ask-ai/ask-ai-chat-dialog.js";
 
 export class StepActionBtn extends HTMLElement {
 	/** @param {TutorialStep} step */
 	constructor(step) {
 		super();
 		this.step = step;
-		console.log(this.step);
 	}
 
 	openAIChatPopup({ pageY }) {
@@ -45,7 +44,9 @@ export class StepActionBtn extends HTMLElement {
 							? html`<button style="--btn-clr:dodgerblue" @click=${this.handleBtnClick.bind(this)}>
 									${btnText}
 							  </button>`
-							: html`<span class="${this.step.state.targetElemStatus}" @click=${this.reFindElem.bind(this)}>${this.step.state.targetElemStatus ?? ""}</span >`}`}
+							: html`<span class="${this.step.state.targetElemStatus}" @click=${this.reFindElem.bind(this)}
+									>${this.step.state.targetElemStatus ?? ""}</span
+							  >`}`}
 
 			<button class="outline-btn" style="--btn-clr:gray" @click=${this.skipStep.bind(this)}>Skip</button>
 			<button class="ask-ai-btn" @click=${this.openAIChatPopup.bind(this)}>Ask AI</button>`;

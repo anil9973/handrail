@@ -1,4 +1,5 @@
 ask-ai-chat-dialog[popover] {
+	position: absolute;
 	width: 96%;
 	margin: 0.5em;
 }

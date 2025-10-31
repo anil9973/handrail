@@ -9,7 +9,7 @@ import baseCss from "../style/base.css" with { type: "css" };
 document.adoptedStyleSheets.push(baseCss);
 
 getStore("userProfile").then(async ({ userProfile }) => {
-	if (!userProfile) {
+	if (userProfile) {
 		import("../components/onboard/onboarding-carousel.js");
 		document.body.append(new UserOnboardForm());
 	} else {

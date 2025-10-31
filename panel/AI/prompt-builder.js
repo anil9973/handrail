@@ -228,7 +228,7 @@ OUTPUT FORMAT (MUST BE VALID JSON):
 	"steps": [
 		{
 			"stepNum": 1,
-			"actionType": "navigation", //  "click", "select" ,"input"
+			"actionType": "navigate", //  "click", "select" ,"input"
 			"action": "Brief action description",
 			"targetElement": { "description": "CSS selector or description", "elementType": "button" },
 			"instruction": "Detailed instruction adapted to user level",

@@ -156,7 +156,7 @@ export class AiService {
 
 	initModel() {
 		this.model = getGenerativeModel(googleAI, {
-			mode: InferenceMode.PREFER_IN_CLOUD,
+			mode: InferenceMode.PREFER_ON_DEVICE,
 			inCloudParams: { model: "gemini-2.5-flash" },
 		});
 	}
