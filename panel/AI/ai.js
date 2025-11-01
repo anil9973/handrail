@@ -28,7 +28,7 @@ export class AIChatSession {
 		try {
 			// Create a `GenerativeModel` instance with a model that supports your use case.
 			this.model = getGenerativeModel(googleAI, {
-				mode: InferenceMode.PREFER_IN_CLOUD,
+				mode: InferenceMode.PREFER_ON_DEVICE,
 				inCloudParams: { model: "gemini-2.5-flash" },
 			});
 			this.userProfile = (await getStore("userProfile")).userProfile ?? {};
